@@ -1,9 +1,19 @@
 package Model;
 
+import javax.annotation.processing.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import java.lang.annotation.Inherited;
 import java.time.LocalDate;
 
+@Entity
 public class NhanSu {
+	@Id
     private String MaNhanSu;
+
 	private String TenNhanSu;
     private String GioiTinh;
     private LocalDate NgaySinh;
@@ -32,17 +42,6 @@ public class NhanSu {
 	    this.MucLuong = MucLuong;
 	    this.MatKhau = MatKhau;
 	}
-
-	public NhanSu(String TenNhanSu, String Email, String SoCCCD, String MaPhongBan, String MaChucVu, String MaViTri, int MucLuong, String MatKhau) {
-		this.TenNhanSu = TenNhanSu;
-		this.Email = Email;
-		this.MaPhongBan = MaPhongBan;
-		this.MaChucVu = MaChucVu;
-		this.MaViTri = MaViTri;
-		this.MucLuong = MucLuong;
-		this.MatKhau = MatKhau;
-	}
-
 
 	public String getMaNhanSu() {
 	    return MaNhanSu;
@@ -139,4 +138,6 @@ public class NhanSu {
 	public void setMatKhau(String MatKhau) {
 	    this.MatKhau = MatKhau;
 	}
+
+	
 }
